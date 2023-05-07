@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    color: #4CAF50;
   }
   
   /* Send verification code button */
@@ -58,4 +59,99 @@
     font-size: 24px;
     border-radius: 5px;
   }
-  
+  .send-code {
+    color: #f9fbf9;
+    background-color: #4CAF50;
+    background-color: #007bff; /* Change to the color you want */
+    color: #fff; /* Change to the color you want */
+    font-family: Arial, sans-serif; /* Change to the font you want */
+    font-size: 16px; /* Change to the font size you want */
+    padding: 8px 16px; /* Change the padding to adjust the button size */
+    border: none; /* Remove the border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+  }
+  .set-code:hover {
+    background-color: #0069d9;
+  }
+  .submit-verify {
+    color: #f9fbf9;
+    background-color: #4CAF50;
+    background-color: #67ec74; /* Change to the color you want */
+    color: #fff; /* Change to the color you want */
+    font-family: Arial, sans-serif; /* Change to the font you want */
+    font-size: 16px; /* Change to the font size you want */
+    padding: 8px 16px; /* Change the padding to adjust the button size */
+    border: none; /* Remove the border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    margin-top: 2ch;
+
+  }
+  .no-border {
+    border: none;
+    outline: none;
+    text-align: center;
+    border-bottom: 2px solid rgb(14, 13, 13);
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 2cm;
+    
+  }
+  .txt2 {
+    font-size: 3vh;
+    color: #746c6c;
+  padding: 10px;
+  border-radius: 5px;
+  }
+ .click-able {
+   cursor: pointer;
+   color: #0069d9;
+   font-size: medium;
+ }
+  /* Phone.css */
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .send-code,
+  .submit-verify {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  input[type="text"] {
+    font-size: 24px;
+    width: 32px;
+    height: 48px;
+    margin: 8px;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 601px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .send-code,
+  .submit-verify {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  input[type="text"] {
+    font-size: 32px;
+    width: 56px;
+    height: 80px;
+    margin: 16px;
+  }
+}

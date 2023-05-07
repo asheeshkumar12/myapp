@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import './Phone.css';
-function handleSubmit() {
-    alert("Button clicked!");
-  }
+
 function PhoneVerification() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const inputRefs = useRef([]);
@@ -54,17 +52,26 @@ function PhoneVerification() {
   };
 
   const handleSubmit = () => {
-    const otpValue = otp.join("");
-    // Here, you can verify the OTP with your backend server
-    console.log(otpValue);
+    const isFilled = otp.every(digit => digit !== '');
+    if (isFilled) {
+      const otpValue = otp.join("");
+      // Here, you can verify the OTP with your backend server
+      console.log(otpValue);
+      alert('OTP successfully Verified');
+    } else {
+      alert('Please fill all the digits of the OTP');
+    }
   };
 
   return (
     <div>
-      <button onClick={() => alert("Verification code sent!")}>
+      {/* <button class="send-code">
         Send Verification Code
-      </button>
+      </button> */}
       <div>
+        <h2>Phone Verification </h2>
+        <hr></hr>
+        <p class="txt2">Enter the OTP you received on 89568-5XXXX</p>
         {otp.map((digit, index) => (
           <input
             key={index}
@@ -77,27 +84,32 @@ function PhoneVerification() {
             onKeyDown={(e) => handleKeyDown(e, index)}
             onPaste={handlePaste}
             ref={(ref) => inputRefs.current.push(ref)}
+            className="no-border"
           />
         ))}
       </div>
-      <button onClick={() => alert("successful")}>Verify</button>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+         <p className="click-able">Change Number</p>
+         <p className="click-able">Re-send OTP</p>
+     </div>
+     <button class="submit-verify" onClick={handleSubmit}>Verify Phone Number</button>
     </div>
   );
 }
 
-  
+
 function App() {
   const [isVerified, setIsVerified] = useState(false);
 
   const handleVerify = () => {
     setIsVerified(true);
-    alert("Successfully verified!")
+    alert("Successfully OTP Send!")
   };
 
   return (
     <div>
       {!isVerified && (
-        <button onClick={handleVerify}>Click here to verify your phone</button>
+        <button onClick={handleVerify}>Send OTP to your phone</button>
       )}
       {isVerified && <PhoneVerification />}
     </div>
