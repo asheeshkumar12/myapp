@@ -1,0 +1,61 @@
+/* Phone verification container */
+.phone-verification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Send verification code button */
+  .send-code-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* OTP input container */
+  .otp-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* OTP input box */
+  .otp-input-box {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+  }
+  
+  /* Verify button */
+  .verify-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Square box */
+  .square-box {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+  }
+  

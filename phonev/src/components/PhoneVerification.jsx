@@ -1,5 +1,8 @@
 import React, { useState, useRef } from "react";
-
+import './Phone.css';
+function handleSubmit() {
+    alert("Button clicked!");
+  }
 function PhoneVerification() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const inputRefs = useRef([]);
@@ -77,16 +80,18 @@ function PhoneVerification() {
           />
         ))}
       </div>
-      <button onClick={handleSubmit}>Verify</button>
+      <button onClick={() => alert("successful")}>Verify</button>
     </div>
   );
 }
 
+  
 function App() {
   const [isVerified, setIsVerified] = useState(false);
 
   const handleVerify = () => {
     setIsVerified(true);
+    alert("Successfully verified!")
   };
 
   return (
